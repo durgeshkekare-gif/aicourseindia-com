@@ -3,14 +3,17 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>All AI & Data Science Programs India 2026 | IIT & IIM | aicourseindia.com</title>
-<meta name="description" content="All 9 AI, Data Science, ML and GenAI certificate programs from IITs and IIMs for working professionals India 2026 — fees, duration and eligibility.">
+<meta name="description" content="All 9 AI, Data Science, ML and GenAI certificate programs from IITs and IIMs for working professionals India 2026 — fees, duration, eligibility and direct program links.">
 <link rel="canonical" href="https://aicourseindia.com/programs/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 <style>
-.prog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.25rem;margin-top:2rem;}
-.prog-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.1);transform:translateY(-3px);}
+.prog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;margin-top:2rem;}
+.filter-row{display:flex;gap:0.5rem;flex-wrap:wrap;padding:1rem 1.25rem;background:#F8FAFC;border-radius:12px;border:1px solid #E2E8F0;margin-bottom:1.5rem;align-items:center;}
+.filter-label{font-size:0.72rem;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:0.08em;}
+.fb{padding:0.35rem 0.875rem;border-radius:20px;font-size:0.75rem;font-weight:600;border:1.5px solid #E2E8F0;background:#fff;color:#64748B;cursor:pointer;transition:all 0.15s;font-family:inherit;}
+.fb:hover,.fb.on{background:#0A0F1E;color:#fff;border-color:#0A0F1E;}
 </style>
 </head>
 <body>
@@ -25,166 +28,45 @@
   <a href="/apply.html" class="nav-cta">Free counselling</a>
   <button class="nav-hamburger">&#9776;</button>
 </nav>
-<div style="background:var(--navy);padding:64px 5%;text-align:center;">
-  <div class="eyebrow eyebrow-dark">9 programs &middot; 7 institutions</div>
-  <h1 style="font-family:var(--font-head);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--white);letter-spacing:-0.02em;margin-bottom:0.75rem;">All AI &amp; Data Science Programs</h1>
-  <p style="font-size:1rem;color:rgba(255,255,255,0.55);max-width:520px;margin:0 auto;">IIT and IIM certificate programs for working professionals 2026. No JEE or CAT required.</p>
+<div style="background:#0A0F1E;padding:64px 5%;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#2563EB,#10B981);"></div>
+  <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:#10B981;margin-bottom:0.875rem;">9 programs · 7 institutions · 2026</div>
+  <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#fff;letter-spacing:-0.02em;margin-bottom:0.75rem;">All AI &amp; Data Science Programs</h1>
+  <p style="font-size:1rem;color:rgba(255,255,255,0.5);max-width:520px;margin:0 auto 1.5rem;">IIT and IIM certificate programs for working professionals. No JEE or CAT required. Each card has a direct link to the program page.</p>
 </div>
-<section style="padding:64px 5%;max-width:1200px;margin:0 auto;">
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
-    <div style="font-size:0.82rem;color:var(--text-muted);">Showing <strong>9 programs</strong> across 7 institutions</div>
-    <a href="/compare.html" style="font-size:0.78rem;font-weight:600;color:var(--blue);">Side-by-side comparison &rarr;</a>
+<section style="padding:56px 5%;max-width:1280px;margin:0 auto;">
+  <div class="filter-row">
+    <span class="filter-label">Filter:</span>
+    <button class="fb on" onclick="filterAll(this)">All 9</button>
+    <button class="fb" onclick="filterBy('iit',this)">IIT only</button>
+    <button class="fb" onclick="filterBy('iim',this)">IIM only</button>
+    <button class="fb" onclick="filterBy('genai',this)">GenAI</button>
+    <button class="fb" onclick="filterBy('ds',this)">Data Science</button>
+    <button class="fb" onclick="filterBy('manager',this)">For Managers</button>
+    <button class="fb" onclick="filterBy('short',this)">Under 8 months</button>
   </div>
-  <div class="prog-grid"><div class="prog-card" style="background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s;position:relative;">
-  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--green));"></div>
-  <div style="padding:1.25rem 1.25rem 0;flex:1;">
-    <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--blue);margin-bottom:0.3rem;">IIT Bombay</div>
-    <div style="font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:0.6rem;">AI for Business Managers</div>
-    <span style="font-size:0.65rem;padding:0.18rem 0.55rem;border-radius:4px;background:var(--blue-glow);border:1px solid rgba(37,99,235,0.2);color:var(--blue);font-weight:600;">GenAI · Managers</span>
+  <div class="prog-grid" id="pg">
+    <div class="pc-wrap" data-inst="iit" data-track="genai · ai for managers" data-level="non-tech managers" data-dur="short"><div style="background:#fff;border-radius:16px;border:1px solid #E2E8F0;overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s;position:relative;">
+  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#2563EB,#10B981);"></div><div class="pc-wrap" data-inst="iit" data-track="data science · ml" data-level="tech / engineers" data-dur="short">  <div style="padding:1.25rem 1.25rem 0;flex:1;">
+    <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem;">
+      <span style="font-size:0.62rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:4px;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.18);color:#2563EB;">IIT</span>
+      <span style="font-size:0.72rem;font-weight:600;color:#2563EB;">IIT Bombay</span>
+    </div><div class="pc-wrap" data-inst="iit" data-track="data science · genai · campus" data-level="tech + managerial" data-dur="short">    <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;font-weight:700;color:#0F172A;line-height:1.4;margin-bottom:0.6rem;">Certificate Programme in AI for Business Managers</div><div class="pc-wrap" data-inst="iit" data-track="deep learning · ai" data-level="tech / 3+ yrs" data-dur="short">    <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.875rem;">
+      <span style="font-size:0.62rem;padding:0.15rem 0.5rem;border-radius:4px;background:#F1F5F9;border:1px solid #E2E8F0;color:#64748B;">GenAI</span><span style="font-size:0.62rem;padding:0.15rem 0.5rem;border-radius:4px;background:#F1F5F9;border:1px solid #E2E8F0;color:#64748B;">AI for Managers</span>
+      <span style="font-size:0.62rem;padding:0.15rem 0.5rem;border-radius:4px;background:#F1F5F9;border:1px solid #E2E8F0;color:#64748B;">Non-tech managers</span>
+    </div><div class="pc-wrap" data-inst="iit" data-track="genai · ml" data-level="tech or business" data-dur="short">  </div><div class="pc-wrap" data-inst="iit" data-track="data science · global credential" data-level="any graduate" data-dur="short">  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#F8FAFC;border-top:1px solid #E2E8F0;">
+    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid #E2E8F0;">
+      <div style="font-size:0.82rem;font-weight:700;color:#0F172A;">6 months</div><div class="pc-wrap" data-inst="iit" data-track="data science · ml" data-level="tech / any grad" data-dur="short">      <div style="font-size:0.6rem;color:#64748B;text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Duration</div><div class="pc-wrap" data-inst="iim" data-track="analytics · genai" data-level="business managers" data-dur="short">    </div><div class="pc-wrap" data-inst="iim" data-track="ai strategy · cybersecurity" data-level="managers / it leaders" data-dur="short">    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid #E2E8F0;">
+      <div style="font-size:0.82rem;font-weight:700;color:#0F172A;">~₹1.5–2L</div>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--off-white);border-top:1px solid var(--border);margin-top:0.875rem;">
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">6 mo</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Duration</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">~₹1.5–2L</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Fee + GST</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;"><div style="font-size:0.82rem;font-weight:600;color:var(--blue);">IIT/IIM</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Credential</div></div>
-  </div>
-  <div style="padding:0.875rem 1.25rem;display:flex;gap:0.5rem;justify-content:space-between;align-items:center;">
-    <a href="/institutions/iit-bombay/" style="font-size:0.75rem;font-weight:600;color:var(--blue);">View details &rarr;</a>
-    <a href="/apply.html?p=iitb-ai" class="btn btn-blue btn-sm">Enquire</a>
-  </div>
-</div><div class="prog-card" style="background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s;position:relative;">
-  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--green));"></div>
-  <div style="padding:1.25rem 1.25rem 0;flex:1;">
-    <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--blue);margin-bottom:0.3rem;">IIT Delhi</div>
-    <div style="font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:0.6rem;">Applied Data Science — ML & AI</div>
-    <span style="font-size:0.65rem;padding:0.18rem 0.55rem;border-radius:4px;background:var(--blue-glow);border:1px solid rgba(37,99,235,0.2);color:var(--blue);font-weight:600;">Data Science · ML</span>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--off-white);border-top:1px solid var(--border);margin-top:0.875rem;">
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">6 mo</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Duration</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">~₹1.5–2L</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Fee + GST</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;"><div style="font-size:0.82rem;font-weight:600;color:var(--blue);">IIT/IIM</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Credential</div></div>
-  </div>
-  <div style="padding:0.875rem 1.25rem;display:flex;gap:0.5rem;justify-content:space-between;align-items:center;">
-    <a href="/institutions/iit-delhi/" style="font-size:0.75rem;font-weight:600;color:var(--blue);">View details &rarr;</a>
-    <a href="/apply.html?p=iitd-ds" class="btn btn-blue btn-sm">Enquire</a>
-  </div>
-</div><div class="prog-card" style="background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s;position:relative;">
-  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--green));"></div>
-  <div style="padding:1.25rem 1.25rem 0;flex:1;">
-    <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--blue);margin-bottom:0.3rem;">IIT Roorkee</div>
-    <div style="font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:0.6rem;">PG Cert. Applied Data Science & AI</div>
-    <span style="font-size:0.65rem;padding:0.18rem 0.55rem;border-radius:4px;background:var(--blue-glow);border:1px solid rgba(37,99,235,0.2);color:var(--blue);font-weight:600;">DS · GenAI · Campus</span>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--off-white);border-top:1px solid var(--border);margin-top:0.875rem;">
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">6–8 mo</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Duration</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">~₹1.5–2L</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Fee + GST</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;"><div style="font-size:0.82rem;font-weight:600;color:var(--blue);">IIT/IIM</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Credential</div></div>
-  </div>
-  <div style="padding:0.875rem 1.25rem;display:flex;gap:0.5rem;justify-content:space-between;align-items:center;">
-    <a href="/institutions/iit-roorkee/" style="font-size:0.75rem;font-weight:600;color:var(--blue);">View details &rarr;</a>
-    <a href="/apply.html?p=iitr-dsai" class="btn btn-blue btn-sm">Enquire</a>
-  </div>
-</div><div class="prog-card" style="background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s;position:relative;">
-  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--green));"></div>
-  <div style="padding:1.25rem 1.25rem 0;flex:1;">
-    <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--blue);margin-bottom:0.3rem;">IIT Madras</div>
-    <div style="font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:0.6rem;">Advanced Data Science & Applications</div>
-    <span style="font-size:0.65rem;padding:0.18rem 0.55rem;border-radius:4px;background:var(--blue-glow);border:1px solid rgba(37,99,235,0.2);color:var(--blue);font-weight:600;">Deep Learning · AI</span>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--off-white);border-top:1px solid var(--border);margin-top:0.875rem;">
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">10 mo</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Duration</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">~₹2L</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Fee + GST</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;"><div style="font-size:0.82rem;font-weight:600;color:var(--blue);">IIT/IIM</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Credential</div></div>
-  </div>
-  <div style="padding:0.875rem 1.25rem;display:flex;gap:0.5rem;justify-content:space-between;align-items:center;">
-    <a href="/institutions/iit-madras/" style="font-size:0.75rem;font-weight:600;color:var(--blue);">View details &rarr;</a>
-    <a href="/apply.html?p=iitm-adsa" class="btn btn-blue btn-sm">Enquire</a>
-  </div>
-</div><div class="prog-card" style="background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s;position:relative;">
-  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--green));"></div>
-  <div style="padding:1.25rem 1.25rem 0;flex:1;">
-    <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--blue);margin-bottom:0.3rem;">IIT Madras</div>
-    <div style="font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:0.6rem;">ML, GenAI & LLMs for Business</div>
-    <span style="font-size:0.65rem;padding:0.18rem 0.55rem;border-radius:4px;background:var(--blue-glow);border:1px solid rgba(37,99,235,0.2);color:var(--blue);font-weight:600;">GenAI · ML</span>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--off-white);border-top:1px solid var(--border);margin-top:0.875rem;">
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">~8 mo</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Duration</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">~₹1.5L</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Fee + GST</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;"><div style="font-size:0.82rem;font-weight:600;color:var(--blue);">IIT/IIM</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Credential</div></div>
-  </div>
-  <div style="padding:0.875rem 1.25rem;display:flex;gap:0.5rem;justify-content:space-between;align-items:center;">
-    <a href="/institutions/iit-madras/" style="font-size:0.75rem;font-weight:600;color:var(--blue);">View details &rarr;</a>
-    <a href="/apply.html?p=iitm-genai" class="btn btn-blue btn-sm">Enquire</a>
-  </div>
-</div><div class="prog-card" style="background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s;position:relative;">
-  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--green));"></div>
-  <div style="padding:1.25rem 1.25rem 0;flex:1;">
-    <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--blue);margin-bottom:0.3rem;">IIT Madras + Rotman UofT</div>
-    <div style="font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:0.6rem;">Advanced Data Science (Global)</div>
-    <span style="font-size:0.65rem;padding:0.18rem 0.55rem;border-radius:4px;background:var(--blue-glow);border:1px solid rgba(37,99,235,0.2);color:var(--blue);font-weight:600;">DS · Global cred</span>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--off-white);border-top:1px solid var(--border);margin-top:0.875rem;">
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">~6 mo</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Duration</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">₹1.61L</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Fee + GST</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;"><div style="font-size:0.82rem;font-weight:600;color:var(--blue);">IIT/IIM</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Credential</div></div>
-  </div>
-  <div style="padding:0.875rem 1.25rem;display:flex;gap:0.5rem;justify-content:space-between;align-items:center;">
-    <a href="/institutions/iit-madras/" style="font-size:0.75rem;font-weight:600;color:var(--blue);">View details &rarr;</a>
-    <a href="/apply.html?p=iitm-rotman" class="btn btn-blue btn-sm">Enquire</a>
-  </div>
-</div><div class="prog-card" style="background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s;position:relative;">
-  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--green));"></div>
-  <div style="padding:1.25rem 1.25rem 0;flex:1;">
-    <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--blue);margin-bottom:0.3rem;">IIT Guwahati</div>
-    <div style="font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:0.6rem;">Data Science & ML Certification</div>
-    <span style="font-size:0.65rem;padding:0.18rem 0.55rem;border-radius:4px;background:var(--blue-glow);border:1px solid rgba(37,99,235,0.2);color:var(--blue);font-weight:600;">DS · ML</span>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--off-white);border-top:1px solid var(--border);margin-top:0.875rem;">
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">6 mo</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Duration</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">~₹1.5L</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Fee + GST</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;"><div style="font-size:0.82rem;font-weight:600;color:var(--blue);">IIT/IIM</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Credential</div></div>
-  </div>
-  <div style="padding:0.875rem 1.25rem;display:flex;gap:0.5rem;justify-content:space-between;align-items:center;">
-    <a href="/institutions/iit-guwahati/" style="font-size:0.75rem;font-weight:600;color:var(--blue);">View details &rarr;</a>
-    <a href="/apply.html?p=iitg-dsml" class="btn btn-blue btn-sm">Enquire</a>
-  </div>
-</div><div class="prog-card" style="background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s;position:relative;">
-  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--green));"></div>
-  <div style="padding:1.25rem 1.25rem 0;flex:1;">
-    <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--blue);margin-bottom:0.3rem;">IIM Kozhikode</div>
-    <div style="font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:0.6rem;">Applied Analytics & GenAI for Business</div>
-    <span style="font-size:0.65rem;padding:0.18rem 0.55rem;border-radius:4px;background:var(--green-glow);border:1px solid rgba(16,185,129,0.2);color:var(--green);font-weight:600;">Analytics · GenAI</span>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--off-white);border-top:1px solid var(--border);margin-top:0.875rem;">
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">12 mo</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Duration</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">~₹2L</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Fee + GST</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;"><div style="font-size:0.82rem;font-weight:600;color:var(--blue);">IIT/IIM</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Credential</div></div>
-  </div>
-  <div style="padding:0.875rem 1.25rem;display:flex;gap:0.5rem;justify-content:space-between;align-items:center;">
-    <a href="/institutions/iim-kozhikode/" style="font-size:0.75rem;font-weight:600;color:var(--blue);">View details &rarr;</a>
-    <a href="/apply.html?p=iimk-analytics" class="btn btn-blue btn-sm">Enquire</a>
-  </div>
-</div><div class="prog-card" style="background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s;position:relative;">
-  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--green));"></div>
-  <div style="padding:1.25rem 1.25rem 0;flex:1;">
-    <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--blue);margin-bottom:0.3rem;">IIM Indore</div>
-    <div style="font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:0.6rem;">AI & Cybersecurity for Organizations</div>
-    <span style="font-size:0.65rem;padding:0.18rem 0.55rem;border-radius:4px;background:var(--green-glow);border:1px solid rgba(16,185,129,0.2);color:var(--green);font-weight:600;">AI Strategy · Cyber</span>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--off-white);border-top:1px solid var(--border);margin-top:0.875rem;">
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">~8 mo</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Duration</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:0.82rem;font-weight:700;color:var(--text);">~₹2.5–3L</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Fee + GST</div></div>
-    <div style="padding:0.6rem 0.875rem;text-align:center;"><div style="font-size:0.82rem;font-weight:600;color:var(--blue);">IIT/IIM</div><div style="font-size:0.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Credential</div></div>
-  </div>
-  <div style="padding:0.875rem 1.25rem;display:flex;gap:0.5rem;justify-content:space-between;align-items:center;">
-    <a href="/institutions/iim-indore/" style="font-size:0.75rem;font-weight:600;color:var(--blue);">View details &rarr;</a>
-    <a href="/apply.html?p=iimi-cyber" class="btn btn-blue btn-sm">Enquire</a>
-  </div>
-</div></div>
 </section>
-<div style="background:linear-gradient(135deg,var(--navy),#1E2D4A);padding:64px 5%;text-align:center;">
-  <h2 style="font-family:var(--font-head);font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--white);margin-bottom:0.75rem;">Not sure which program is right?</h2>
-  <p style="font-size:0.95rem;color:rgba(255,255,255,0.55);margin-bottom:1.5rem;">A free advisor matches your background and goals to the right program in 20 minutes.</p>
-  <a href="/apply.html" class="btn btn-blue btn-lg">Get free counselling &rarr;</a>
+<div style="background:linear-gradient(135deg,#0A0F1E,#1E2D4A);padding:64px 5%;text-align:center;">
+  <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:#fff;margin-bottom:0.75rem;">Not sure which program?</h2>
+  <p style="font-size:0.95rem;color:rgba(255,255,255,0.5);margin-bottom:1.5rem;max-width:480px;margin-left:auto;margin-right:auto;">A free advisor matches your background and goals to the right program in 20 minutes.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="/apply.html" style="display:inline-flex;align-items:center;padding:0.9rem 2rem;background:#2563EB;color:#fff;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;">Get free counselling &rarr;</a>
+    <a href="/compare.html" style="display:inline-flex;align-items:center;padding:0.9rem 2rem;background:transparent;color:rgba(255,255,255,0.7);border:1.5px solid rgba(255,255,255,0.2);border-radius:8px;font-weight:600;font-size:0.95rem;text-decoration:none;">Compare table</a>
+  </div>
 </div>
 <footer class="site-footer">
   <div class="footer-top">
@@ -213,4 +95,8 @@
 </footer>
 <div class="sticky-mobile"><a href="tel:+918080089898" class="sm-call">&#128222; Call</a><a href="/apply.html" class="sm-apply">Free counselling &rarr;</a></div>
 <script src="/assets/main.js"></script>
+<script>
+function filterAll(btn){document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');document.querySelectorAll('.pc-wrap').forEach(c=>c.style.display='');}
+function filterBy(type,btn){document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');document.querySelectorAll('.pc-wrap').forEach(c=>{var show=true;if(type==='iit')show=c.dataset.inst==='iit';else if(type==='iim')show=c.dataset.inst==='iim';else if(type==='genai')show=(c.dataset.track||'').includes('genai');else if(type==='ds')show=(c.dataset.track||'').includes('data science');else if(type==='manager')show=(c.dataset.level||'').includes('manager');else if(type==='short')show=c.dataset.dur==='short';c.style.display=show?'':'none';});}
+</script>
 </body></html>
