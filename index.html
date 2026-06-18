@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI Courses India 2026 | IIT & IIM AI Certificate Programs | aicourseindia.com</title>
+<meta name="description" content="All AI, Data Science, Machine Learning and GenAI certificate programs from IITs and IIMs for working professionals 2026. IIT Bombay, IIT Delhi, IIT Roorkee, IIT Madras, IIM Kozhikode and more.">
+<link rel="canonical" href="https://aicourseindia.com/">
+<meta property="og:title" content="AI Courses India 2026 | IIT & IIM Programs | aicourseindia.com">
+<meta property="og:description" content="AI, Data Science, ML and GenAI certificate programs from IITs and IIMs for working professionals 2026.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"aicourseindia.com","url":"https://aicourseindia.com","description":"AI and Data Science certificate programs from IITs and IIMs for working professionals 2026"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+/* HERO */
+.hero{background:var(--navy);min-height:560px;padding:80px 5%;display:grid;grid-template-columns:1fr 480px;gap:4rem;align-items:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,0.12) 0%,transparent 70%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-100px;left:20%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(16,185,129,0.08) 0%,transparent 70%);pointer-events:none;}
+.hero-content{position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);border-radius:20px;padding:0.35rem 0.875rem;font-size:0.7rem;font-weight:700;color:var(--green-light);margin-bottom:1.5rem;letter-spacing:0.06em;}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+.hero h1{font-family:var(--font-head);font-size:clamp(2.2rem,4vw,3.5rem);font-weight:800;color:var(--white);line-height:1.1;letter-spacing:-0.03em;margin-bottom:1.25rem;}
+.hero h1 .grad{background:linear-gradient(135deg,var(--blue-light) 0%,var(--green-light) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,0.55);line-height:1.8;margin-bottom:2rem;max-width:500px;}
+.hero-stats{display:flex;gap:2.5rem;margin-bottom:2.5rem;}
+.hs-item .hv{font-family:var(--font-head);font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,var(--blue-light),var(--green-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hs-item .hl{font-size:0.68rem;color:rgba(255,255,255,0.35);margin-top:2px;}
+.hero-btns{display:flex;gap:0.875rem;flex-wrap:wrap;}
+
+/* PROGRAM FINDER PANEL */
+.finder-panel{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-xl);padding:1.75rem;backdrop-filter:blur(10px);position:relative;z-index:1;}
+.fp-title{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--green-light);margin-bottom:1.25rem;}
+.fp-label{font-size:0.72rem;font-weight:600;color:rgba(255,255,255,0.5);margin-bottom:0.5rem;margin-top:0.875rem;}
+.fp-label:first-of-type{margin-top:0;}
+.fp-pills{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.25rem;}
+.fp-pill{padding:0.3rem 0.7rem;border-radius:20px;font-size:0.72rem;font-weight:600;border:1.5px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.5);cursor:pointer;transition:all 0.15s;background:none;}
+.fp-pill:hover,.fp-pill.sel{background:var(--blue);border-color:var(--blue);color:var(--white);}
+.fp-pill.sel.green{background:var(--green);border-color:var(--green);}
+.fp-result{margin-top:1.25rem;padding:1rem;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:var(--radius);display:none;}
+.fp-result.show{display:block;}
+.fp-result-label{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--green);margin-bottom:0.4rem;}
+.fp-result-prog{font-size:0.88rem;font-weight:700;color:var(--white);margin-bottom:0.2rem;line-height:1.35;}
+.fp-result-inst{font-size:0.75rem;color:rgba(255,255,255,0.5);}
+
+/* TRACKS SECTION */
+.tracks-section{background:var(--off-white);padding:80px 5%;}
+.tracks-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin-top:2.5rem;}
+.track-card{background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);padding:1.5rem;text-align:center;transition:all 0.2s;cursor:pointer;text-decoration:none;display:block;}
+.track-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);border-color:var(--blue);}
+.track-icon{font-size:2rem;margin-bottom:0.75rem;}
+.track-name{font-family:var(--font-head);font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:0.25rem;}
+.track-count{font-size:0.72rem;color:var(--text-muted);}
+
+/* PROGRAMS GRID */
+.programs-section{padding:80px 5%;}
+.filter-row{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem;padding:1rem 1.5rem;background:var(--off-white);border-radius:var(--radius-lg);border:1px solid var(--border);}
+.filter-label{font-size:0.72rem;font-weight:700;color:var(--text-muted);margin-right:0.25rem;text-transform:uppercase;letter-spacing:0.08em;align-self:center;}
+.filter-btn{padding:0.35rem 0.875rem;border-radius:20px;font-size:0.75rem;font-weight:600;border:1.5px solid var(--border);background:var(--white);color:var(--text-muted);cursor:pointer;transition:all 0.15s;font-family:var(--font-body);}
+.filter-btn:hover,.filter-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy);}
+.programs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;}
+
+/* INSTITUTIONS ROW */
+.inst-section{padding:80px 5%;background:var(--navy-mid);}
+.inst-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-top:2.5rem;}
+.inst-card{background:rgba(255,255,255,0.04);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.08);padding:1.5rem;transition:all 0.2s;display:block;text-decoration:none;position:relative;overflow:hidden;}
+.inst-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--green));transform:scaleX(0);transition:transform 0.25s;transform-origin:left;}
+.inst-card:hover{background:rgba(255,255,255,0.07);transform:translateY(-2px);}
+.inst-card:hover::after{transform:scaleX(1);}
+.ic-type{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--green);margin-bottom:0.35rem;}
+.ic-name{font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--white);margin-bottom:0.2rem;}
+.ic-loc{font-size:0.72rem;color:rgba(255,255,255,0.35);margin-bottom:0.875rem;}
+.ic-prog-count{font-size:0.82rem;font-weight:600;color:var(--blue-light);}
+.ic-arrow{font-size:0.78rem;color:rgba(255,255,255,0.3);margin-top:0.3rem;}
+
+/* WHO IS THIS FOR */
+.for-section{padding:80px 5%;background:var(--white);}
+.for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem;}
+.for-card{border-radius:var(--radius-lg);border:1px solid var(--border);padding:1.75rem;transition:all 0.2s;}
+.for-card:hover{box-shadow:var(--shadow);border-color:var(--blue);}
+.for-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1rem;}
+.for-icon.blue{background:var(--blue-glow);border:1px solid rgba(37,99,235,0.2);}
+.for-icon.green{background:var(--green-glow);border:1px solid rgba(16,185,129,0.2);}
+.for-icon.purple{background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.15);}
+.for-title{font-family:var(--font-head);font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;}
+.for-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.75;}
+.for-examples{margin-top:0.875rem;display:flex;flex-wrap:wrap;gap:0.3rem;}
+.for-ex{font-size:0.65rem;padding:0.18rem 0.55rem;border-radius:4px;background:var(--surface);color:var(--text-muted);border:1px solid var(--border);}
+
+/* WHY IIT/IIM */
+.why-section{padding:80px 5%;background:var(--off-white);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem;}
+.why-card{background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);padding:1.5rem;}
+.why-num{font-family:var(--font-head);font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--blue-light),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.5rem;}
+.why-title{font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--text);margin-bottom:0.4rem;}
+.why-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.75;}
+
+/* BLOG */
+.blog-section{padding:80px 5%;}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;margin-top:2.5rem;}
+
+/* FAQ */
+.faq-section{padding:80px 5%;background:var(--off-white);}
+.faq-inner{max-width:760px;margin:2.5rem auto 0;}
+
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;gap:2.5rem;min-height:auto;}
+  .finder-panel{max-width:100%;}
+  .hero-stats{gap:1.5rem;}
+  .for-grid,.why-grid{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .for-grid{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo"><span class="ai">AI</span> Course<span class="dot">●</span>India</a>
+  <ul class="nav-links">
+    <li><a href="/programs/">All Programs</a></li>
+    <li><a href="/institutions/">Institutions</a></li>
+    <li><a href="/tracks/">By Track</a></li>
+    <li><a href="/compare.html">Compare</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <a href="/apply.html" class="nav-cta">Free counselling</a>
+  <button class="nav-hamburger" aria-label="Menu">&#9776;</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span> Admissions open · 2026</div>
+    <h1>AI &amp; Data Science<br>Courses from<br><span class="grad">IITs &amp; IIMs</span></h1>
+    <p class="hero-sub">India's most complete guide to AI, ML, Data Science and GenAI certificate programs from IITs and IIMs — for working professionals. No JEE or CAT required.</p>
+    <div class="hero-stats">
+      <div class="hs-item"><div class="hv">13+</div><div class="hl">Programs</div></div>
+      <div class="hs-item"><div class="hv">8</div><div class="hl">Institutions</div></div>
+      <div class="hs-item"><div class="hv">6–12</div><div class="hl">Months duration</div></div>
+      <div class="hs-item"><div class="hv">0</div><div class="hl">JEE / CAT</div></div>
+    </div>
+    <div class="hero-btns">
+      <a href="/programs/" class="btn btn-blue btn-lg">Browse all programs &rarr;</a>
+      <a href="/apply.html" class="btn btn-outline-light btn-lg">Free counselling</a>
+    </div>
+  </div>
+
+  <!-- Program Finder -->
+  <div class="finder-panel">
+    <div class="fp-title">&#9889; Find your program</div>
+    <div class="fp-label">Your background</div>
+    <div class="fp-pills" id="bg-pills">
+      <button class="fp-pill" onclick="setPill('bg','tech',this)">Tech / IT</button>
+      <button class="fp-pill" onclick="setPill('bg','manager',this)">Manager / Business</button>
+      <button class="fp-pill" onclick="setPill('bg','analyst',this)">Analyst / Finance</button>
+      <button class="fp-pill" onclick="setPill('bg','other',this)">Other</button>
+    </div>
+    <div class="fp-label">What you want to learn</div>
+    <div class="fp-pills" id="goal-pills">
+      <button class="fp-pill" onclick="setPill('goal','genai',this)">GenAI / LLMs</button>
+      <button class="fp-pill" onclick="setPill('goal','ds',this)">Data Science</button>
+      <button class="fp-pill" onclick="setPill('goal','ml',this)">Machine Learning</button>
+      <button class="fp-pill" onclick="setPill('goal','strategy',this)">AI Strategy</button>
+    </div>
+    <div class="fp-result" id="fp-result">
+      <div class="fp-result-label">Best match for you</div>
+      <div class="fp-result-prog" id="fp-prog"></div>
+      <div class="fp-result-inst" id="fp-inst"></div>
+      <a href="/apply.html" class="btn btn-green" style="width:100%;display:flex;justify-content:center;margin-top:1rem;font-size:0.82rem;">Get free counselling &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div style="background:var(--navy-mid);border-bottom:1px solid rgba(255,255,255,0.06);padding:0.875rem 5%;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;">
+  <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:rgba(255,255,255,0.4);font-weight:500;"><span style="color:var(--green);">&#10003;</span> IIT &amp; IIM certified</div>
+  <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:rgba(255,255,255,0.4);font-weight:500;"><span style="color:var(--green);">&#10003;</span> No JEE / CAT required</div>
+  <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:rgba(255,255,255,0.4);font-weight:500;"><span style="color:var(--green);">&#10003;</span> Weekend live sessions</div>
+  <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:rgba(255,255,255,0.4);font-weight:500;"><span style="color:var(--green);">&#10003;</span> Campus immersion included</div>
+  <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:rgba(255,255,255,0.4);font-weight:500;"><span style="color:var(--green);">&#10003;</span> EMI available on all programs</div>
+</div>
+
+<!-- TRACKS -->
+<section class="tracks-section">
+  <div class="eyebrow">Browse by track</div>
+  <h2 class="section-title">Which AI track fits your goals?</h2>
+  <div class="tracks-grid">
+    <a href="/tracks/generative-ai/" class="track-card"><div class="track-icon">🤖</div><div class="track-name">Generative AI &amp; LLMs</div><div class="track-count">4 programs</div></a>
+    <a href="/tracks/data-science/" class="track-card"><div class="track-icon">📊</div><div class="track-name">Data Science</div><div class="track-count">5 programs</div></a>
+    <a href="/tracks/machine-learning/" class="track-card"><div class="track-icon">🧠</div><div class="track-name">Machine Learning</div><div class="track-count">4 programs</div></a>
+    <a href="/tracks/ai-for-managers/" class="track-card"><div class="track-icon">💼</div><div class="track-name">AI for Managers</div><div class="track-count">3 programs</div></a>
+    <a href="/tracks/analytics/" class="track-card"><div class="track-icon">📈</div><div class="track-name">Business Analytics</div><div class="track-count">3 programs</div></a>
+    <a href="/tracks/cybersecurity/" class="track-card"><div class="track-icon">🔐</div><div class="track-name">AI &amp; Cybersecurity</div><div class="track-count">1 program</div></a>
+  </div>
+</section>
+
+<!-- ALL PROGRAMS -->
+<section class="programs-section">
+  <div class="eyebrow">13+ programs · 8 institutions</div>
+  <h2 class="section-title">All AI &amp; Data Science programs — 2026</h2>
+  <div class="filter-row">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="filterProgs('all',this)">All</button>
+    <button class="filter-btn" onclick="filterProgs('iit',this)">IIT only</button>
+    <button class="filter-btn" onclick="filterProgs('iim',this)">IIM only</button>
+    <button class="filter-btn" onclick="filterProgs('genai',this)">GenAI</button>
+    <button class="filter-btn" onclick="filterProgs('ds',this)">Data Science</button>
+    <button class="filter-btn" onclick="filterProgs('manager',this)">For Managers</button>
+    <button class="filter-btn" onclick="filterProgs('short',this)">Under 8 months</button>
+  </div>
+  <div class="programs-grid" id="prog-grid">
+
+    <!-- IIT BOMBAY -->
+    <div class="prog-card" data-inst="iit" data-track="genai manager ai" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-inst">&#127968; IIT Bombay <span style="color:var(--text-muted);font-weight:400;">· DSSE</span></div>
+        <div class="pc-title">Certificate Programme in AI for Business Managers</div>
+        <div class="pc-tags"><span class="pc-tag">GenAI</span><span class="pc-tag">Prompt Engineering</span><span class="pc-tag">AI Strategy</span><span class="pc-tag">Non-tech</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">6 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;1.5–2L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Managers</div><div class="sl">For</div></div>
+      </div>
+      <div class="pc-foot">
+        <span class="pc-cred" style="color:var(--blue);">IIT Bombay certificate</span>
+        <div style="display:flex;gap:0.4rem;">
+          <a href="/apply.html?p=iitb-ai" class="btn btn-blue btn-sm">Enquire</a>
+          <a href="/institutions/iit-bombay/" class="btn btn-outline btn-sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- IIT DELHI -->
+    <div class="prog-card" data-inst="iit" data-track="ds ml ai" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-inst">&#127968; IIT Delhi <span style="color:var(--text-muted);font-weight:400;">· CEP</span></div>
+        <div class="pc-title">Executive Programme in Applied Data Science using ML &amp; AI</div>
+        <div class="pc-tags"><span class="pc-tag">Data Science</span><span class="pc-tag">Machine Learning</span><span class="pc-tag">AI</span><span class="pc-tag">Python</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">6 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;1.5–2L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Tech / Any</div><div class="sl">For</div></div>
+      </div>
+      <div class="pc-foot">
+        <span class="pc-cred" style="color:var(--blue);">IIT Delhi certificate</span>
+        <div style="display:flex;gap:0.4rem;">
+          <a href="/apply.html?p=iitd-ds" class="btn btn-blue btn-sm">Enquire</a>
+          <a href="/institutions/iit-delhi/" class="btn btn-outline btn-sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- IIT ROORKEE -->
+    <div class="prog-card" data-inst="iit" data-track="ds ml ai genai" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-inst">&#127968; IIT Roorkee <span style="color:var(--text-muted);font-weight:400;">· CEC</span></div>
+        <div class="pc-title">PG Certificate in Applied Data Science &amp; AI</div>
+        <div class="pc-tags"><span class="pc-tag">Data Science</span><span class="pc-tag">AI</span><span class="pc-tag">GenAI</span><span class="pc-tag">LLMs</span><span class="pc-tag">Campus immersion</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">6–8 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;1.5–2L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Tech / Mgmt</div><div class="sl">For</div></div>
+      </div>
+      <div class="pc-foot">
+        <span class="pc-cred" style="color:var(--blue);">IIT Roorkee PG certificate</span>
+        <div style="display:flex;gap:0.4rem;">
+          <a href="/apply.html?p=iitr-dsai" class="btn btn-blue btn-sm">Enquire</a>
+          <a href="/institutions/iit-roorkee/" class="btn btn-outline btn-sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- IIT MADRAS P1 -->
+    <div class="prog-card" data-inst="iit" data-track="ds ml ai" data-dur="long">
+      <div class="pc-body">
+        <div class="pc-inst">&#127968; IIT Madras <span style="color:var(--text-muted);font-weight:400;">· IITM Pravartak</span></div>
+        <div class="pc-title">Executive Certification in Advanced Data Science &amp; Applications</div>
+        <div class="pc-tags"><span class="pc-tag">Deep Learning</span><span class="pc-tag">AI</span><span class="pc-tag">Data Analytics</span><span class="pc-tag">Python</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">10 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;2L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Tech / 3+ yrs</div><div class="sl">For</div></div>
+      </div>
+      <div class="pc-foot">
+        <span class="pc-cred" style="color:var(--blue);">IITM Pravartak certificate</span>
+        <div style="display:flex;gap:0.4rem;">
+          <a href="/apply.html?p=iitm-adsa" class="btn btn-blue btn-sm">Enquire</a>
+          <a href="/institutions/iit-madras/" class="btn btn-outline btn-sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- IIT MADRAS P2 — GenAI -->
+    <div class="prog-card" data-inst="iit" data-track="genai ml ai" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-inst">&#127968; IIT Madras <span style="color:var(--text-muted);font-weight:400;">· IITM Pravartak</span></div>
+        <div class="pc-title">Advanced Certificate in ML, Generative AI &amp; LLMs for Business</div>
+        <div class="pc-tags"><span class="pc-tag">GenAI</span><span class="pc-tag">LLMs</span><span class="pc-tag">Machine Learning</span><span class="pc-tag">Business AI</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">~8 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;1.5L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Tech / Business</div><div class="sl">For</div></div>
+      </div>
+      <div class="pc-foot">
+        <span class="pc-cred" style="color:var(--blue);">IITM Pravartak certificate</span>
+        <div style="display:flex;gap:0.4rem;">
+          <a href="/apply.html?p=iitm-genai" class="btn btn-blue btn-sm">Enquire</a>
+          <a href="/institutions/iit-madras/" class="btn btn-outline btn-sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- IIT MADRAS P3 — Rotman -->
+    <div class="prog-card" data-inst="iit" data-track="ds analytics" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-inst">&#127968; IIT Madras + Rotman School (UofT)</div>
+        <div class="pc-title">Advanced Data Science Certificate Program</div>
+        <div class="pc-tags"><span class="pc-tag">Data Science</span><span class="pc-tag">Global credential</span><span class="pc-tag">Analytics</span><span class="pc-tag">University of Toronto</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">~6 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">&#8377;1.61L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Any grad</div><div class="sl">Eligibility</div></div>
+      </div>
+      <div class="pc-foot">
+        <span class="pc-cred" style="color:var(--blue);">IIT Madras + Rotman certificate</span>
+        <div style="display:flex;gap:0.4rem;">
+          <a href="/apply.html?p=iitm-rotman" class="btn btn-blue btn-sm">Enquire</a>
+          <a href="/institutions/iit-madras/" class="btn btn-outline btn-sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- IIT GUWAHATI -->
+    <div class="prog-card" data-inst="iit" data-track="ds ml" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-inst">&#127968; IIT Guwahati <span style="color:var(--text-muted);font-weight:400;">· E&amp;ICT Academy</span></div>
+        <div class="pc-title">Advanced Certification in Data Science &amp; Machine Learning</div>
+        <div class="pc-tags"><span class="pc-tag">Data Science</span><span class="pc-tag">Machine Learning</span><span class="pc-tag">Python</span><span class="pc-tag">NLP</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">6 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;1.5L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Tech / Any</div><div class="sl">For</div></div>
+      </div>
+      <div class="pc-foot">
+        <span class="pc-cred" style="color:var(--blue);">IIT Guwahati certificate</span>
+        <div style="display:flex;gap:0.4rem;">
+          <a href="/apply.html?p=iitg-dsml" class="btn btn-blue btn-sm">Enquire</a>
+          <a href="/institutions/iit-guwahati/" class="btn btn-outline btn-sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- IIM KOZHIKODE -->
+    <div class="prog-card" data-inst="iim" data-track="analytics genai manager" data-dur="long">
+      <div class="pc-body">
+        <div class="pc-inst">&#127981; IIM Kozhikode <span style="color:var(--text-muted);font-weight:400;">· NIRF #10</span></div>
+        <div class="pc-title">PCP in Applied Analytics &amp; GenAI for Business Decisions</div>
+        <div class="pc-tags"><span class="pc-tag">Business Analytics</span><span class="pc-tag">GenAI</span><span class="pc-tag">Data-driven decisions</span><span class="pc-tag">Managers</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">12 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;2L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Managers</div><div class="sl">For</div></div>
+      </div>
+      <div class="pc-foot">
+        <span class="pc-cred" style="color:var(--green);">IIMK certificate</span>
+        <div style="display:flex;gap:0.4rem;">
+          <a href="/apply.html?p=iimk-analytics" class="btn btn-green btn-sm">Enquire</a>
+          <a href="/institutions/iim-kozhikode/" class="btn btn-outline btn-sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- IIM INDORE -->
+    <div class="prog-card" data-inst="iim" data-track="ai manager cybersecurity" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-inst">&#127981; IIM Indore <span style="color:var(--text-muted);font-weight:400;">· NIRF #7 · AACSB</span></div>
+        <div class="pc-title">Executive Programme in AI &amp; Cybersecurity for Organizations</div>
+        <div class="pc-tags"><span class="pc-tag">AI Strategy</span><span class="pc-tag">Cybersecurity</span><span class="pc-tag">ML</span><span class="pc-tag">Non-tech managers</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">~8 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;2.5–3L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Managers / IT</div><div class="sl">For</div></div>
+      </div>
+      <div class="pc-foot">
+        <span class="pc-cred" style="color:var(--green);">IIM Indore certificate</span>
+        <div style="display:flex;gap:0.4rem;">
+          <a href="/apply.html?p=iimi-cyber" class="btn btn-green btn-sm">Enquire</a>
+          <a href="/institutions/iim-indore/" class="btn btn-outline btn-sm">Details</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="text-align:center;margin-top:2rem;"><a href="/programs/" class="btn btn-outline">View all 13+ programs &rarr;</a></div>
+</section>
+
+<!-- INSTITUTIONS -->
+<section class="inst-section">
+  <div class="eyebrow eyebrow-dark">8 institutions</div>
+  <h2 class="section-title section-title-light">Browse by institution</h2>
+  <div class="inst-row">
+    <a href="/institutions/iit-bombay/" class="inst-card"><div class="ic-type">IIT · NIRF #3</div><div class="ic-name">IIT Bombay</div><div class="ic-loc">Mumbai · DSSE</div><div class="ic-prog-count">1 program</div><div class="ic-arrow">View &rarr;</div></a>
+    <a href="/institutions/iit-delhi/" class="inst-card"><div class="ic-type">IIT · NIRF #2</div><div class="ic-name">IIT Delhi</div><div class="ic-loc">New Delhi · CEP</div><div class="ic-prog-count">1 program</div><div class="ic-arrow">View &rarr;</div></a>
+    <a href="/institutions/iit-roorkee/" class="inst-card"><div class="ic-type">IIT · NIRF #7</div><div class="ic-name">IIT Roorkee</div><div class="ic-loc">Roorkee · CEC</div><div class="ic-prog-count">1 program</div><div class="ic-arrow">View &rarr;</div></a>
+    <a href="/institutions/iit-madras/" class="inst-card"><div class="ic-type">IIT · NIRF #1</div><div class="ic-name">IIT Madras</div><div class="ic-loc">Chennai · IITM Pravartak</div><div class="ic-prog-count">3 programs</div><div class="ic-arrow">View &rarr;</div></a>
+    <a href="/institutions/iit-guwahati/" class="inst-card"><div class="ic-type">IIT · NIRF #7</div><div class="ic-name">IIT Guwahati</div><div class="ic-loc">Guwahati · E&amp;ICT</div><div class="ic-prog-count">1 program</div><div class="ic-arrow">View &rarr;</div></a>
+    <a href="/institutions/iim-kozhikode/" class="inst-card"><div class="ic-type">IIM · NIRF #10</div><div class="ic-name">IIM Kozhikode</div><div class="ic-loc">Kozhikode · Kerala</div><div class="ic-prog-count">1 program</div><div class="ic-arrow">View &rarr;</div></a>
+    <a href="/institutions/iim-indore/" class="inst-card"><div class="ic-type">IIM · NIRF #7</div><div class="ic-name">IIM Indore</div><div class="ic-loc">Indore · AACSB</div><div class="ic-prog-count">1 program</div><div class="ic-arrow">View &rarr;</div></a>
+  </div>
+</section>
+
+<!-- WHO IS THIS FOR -->
+<section class="for-section">
+  <div class="eyebrow">Who should apply</div>
+  <h2 class="section-title">Three types of professionals — one destination</h2>
+  <div class="for-grid">
+    <div class="for-card">
+      <div class="for-icon blue">💻</div>
+      <div class="for-title">Tech professionals upskilling in AI</div>
+      <div class="for-desc">Software engineers, data analysts, IT professionals who want to move into AI/ML roles or add AI skills to their existing profile.</div>
+      <div class="for-examples"><span class="for-ex">Software Engineer</span><span class="for-ex">Data Analyst</span><span class="for-ex">IT Manager</span><span class="for-ex">DevOps</span></div>
+      <div style="margin-top:1rem;"><a href="/tracks/machine-learning/" style="font-size:0.78rem;font-weight:600;color:var(--blue);">Best track: ML &amp; Data Science &rarr;</a></div>
+    </div>
+    <div class="for-card">
+      <div class="for-icon green">📊</div>
+      <div class="for-title">Business managers adopting AI</div>
+      <div class="for-desc">Non-technical managers, VPs and directors who need to understand, implement and lead AI transformation in their organisations — without coding.</div>
+      <div class="for-examples"><span class="for-ex">VP / Director</span><span class="for-ex">Product Manager</span><span class="for-ex">Marketing</span><span class="for-ex">Operations</span></div>
+      <div style="margin-top:1rem;"><a href="/tracks/ai-for-managers/" style="font-size:0.78rem;font-weight:600;color:var(--green);">Best track: AI for Managers &rarr;</a></div>
+    </div>
+    <div class="for-card">
+      <div class="for-icon purple">🔬</div>
+      <div class="for-title">Analysts &amp; data professionals</div>
+      <div class="for-desc">Business analysts, finance professionals, consultants and researchers who want to add advanced analytics, ML and GenAI to their data skill set.</div>
+      <div class="for-examples"><span class="for-ex">Business Analyst</span><span class="for-ex">Finance</span><span class="for-ex">Consultant</span><span class="for-ex">Researcher</span></div>
+      <div style="margin-top:1rem;"><a href="/tracks/analytics/" style="font-size:0.78rem;font-weight:600;color:var(--purple);">Best track: Business Analytics &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IIT/IIM -->
+<section class="why-section">
+  <div class="eyebrow">Why it matters</div>
+  <h2 class="section-title">Why IIT or IIM for your AI course</h2>
+  <div class="why-grid">
+    <div class="why-card"><div class="why-num">01</div><div class="why-title">Credential employers recognise</div><div class="why-desc">An IIT Bombay or IIM Kozhikode certificate on your profile carries weight no online platform certificate does. Hiring managers know exactly what it means.</div></div>
+    <div class="why-card"><div class="why-num">02</div><div class="why-title">Faculty who actually research AI</div><div class="why-desc">IIT professors are active researchers in AI, ML, NLP and deep learning — not instructors reading slides. The curriculum reflects what's actually happening in the field.</div></div>
+    <div class="why-card"><div class="why-num">03</div><div class="why-title">Campus immersion — real IIT experience</div><div class="why-desc">Most programs include 2–5 day campus modules at the actual IIT. You attend sessions in IIT Delhi's or IIT Roorkee's facility — not just online.</div></div>
+    <div class="why-card"><div class="why-num">04</div><div class="why-title">No JEE or CAT required</div><div class="why-desc">These are executive education programs — admission is based on your professional profile, not entrance exams. Any graduate with work experience can apply.</div></div>
+    <div class="why-card"><div class="why-num">05</div><div class="why-title">Cohort of senior professionals</div><div class="why-desc">Your peers are managers, engineers and analysts from established companies — not freshers. The peer learning and network is as valuable as the content.</div></div>
+    <div class="why-card"><div class="why-num">06</div><div class="why-title">Weekend delivery — keep your job</div><div class="why-desc">All programs are structured for working professionals. Live sessions on Saturday and Sunday, recordings available. No career break required.</div></div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog-section">
+  <div class="eyebrow">Guides &amp; comparisons</div>
+  <h2 class="section-title">AI course guides for working professionals</h2>
+  <div class="blog-grid">
+    <a href="/blog/iit-ai-courses-india-2026.html" class="blog-card"><div class="bc-thumb">🏛️</div><div class="bc-body"><div class="bc-cat">Guide</div><div class="bc-title">IIT AI Courses India 2026 — Complete Guide for Working Professionals</div><div class="bc-meta">10 min read &middot; June 2026</div></div></a>
+    <a href="/blog/iit-vs-iim-ai-course.html" class="blog-card"><div class="bc-thumb">⚖️</div><div class="bc-body"><div class="bc-cat">Comparison</div><div class="bc-title">IIT vs IIM AI Course — Which Is Better for Your Career in 2026?</div><div class="bc-meta">7 min read &middot; May 2026</div></div></a>
+    <a href="/blog/ai-course-salary-impact-india.html" class="blog-card"><div class="bc-thumb">📈</div><div class="bc-body"><div class="bc-cat">Salary</div><div class="bc-title">AI Course Salary Impact in India 2026 — What Alumni Data Shows</div><div class="bc-meta">6 min read &middot; April 2026</div></div></a>
+    <a href="/blog/generative-ai-course-india-2026.html" class="blog-card"><div class="bc-thumb">🤖</div><div class="bc-body"><div class="bc-cat">GenAI</div><div class="bc-title">Best Generative AI Courses in India 2026 — IIT &amp; IIM Options Compared</div><div class="bc-meta">8 min read &middot; March 2026</div></div></a>
+  </div>
+  <div style="text-align:center;margin-top:2rem;"><a href="/blog/" class="btn btn-outline">All articles &rarr;</a></div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="eyebrow">Common questions</div>
+    <h2 class="section-title">Frequently asked questions</h2>
+    <div style="margin-top:2rem;">
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">Do I need coding experience to apply?<span class="faq-icon">+</span></button><div class="faq-answer">It depends on the program. IIT technical programs (IIT Delhi, IIT Roorkee, IIT Madras Advanced DS) require comfort with basic programming and mathematics. IIT Bombay's AI for Business Managers and IIM programs are designed for non-technical professionals — no coding background required. Check the specific program's eligibility section.</div></div>
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">Is an IIT AI certificate worth it vs online platforms like Coursera?<span class="faq-icon">+</span></button><div class="faq-answer">For career advancement in India specifically — yes. An IIT certificate carries institutional credibility that platform certificates (Coursera, Udemy, even Google) do not in most Indian corporate environments. The peer cohort, live faculty interaction, campus module and alumni network are also meaningfully different. For pure knowledge acquisition, online platforms are fine. For career positioning, IIT/IIM credentials have a clear edge.</div></div>
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">Which program is best for non-technical managers?<span class="faq-icon">+</span></button><div class="faq-answer">Three programs are specifically designed for non-technical professionals: (1) IIT Bombay AI for Business Managers — GenAI strategy and enterprise AI adoption; (2) IIM Kozhikode Applied Analytics & GenAI — business decision-making with data; (3) IIM Indore AI & Cybersecurity — AI strategy with a security focus. None of these require programming experience.</div></div>
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">Which IIT has the best AI program?<span class="faq-icon">+</span></button><div class="faq-answer">Each IIT has a distinct focus. IIT Madras (IITM Pravartak) has the strongest deep learning and GenAI research base. IIT Delhi's program is mathematics-heavy — strong for those who want rigorous ML foundations. IIT Roorkee's program is the most practical with 2 campus immersions. IIT Bombay's program is uniquely suited for business managers. The "best" depends entirely on your background and goal.</div></div>
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">How are sessions conducted?<span class="faq-icon">+</span></button><div class="faq-answer">All programs use live online sessions — typically on Saturday and Sunday, 3–5 hours per day. Recordings are available for replay. Most programs include 1–2 campus immersion modules at the IIT campus (2–5 days each), which are scheduled with advance notice. You attend from your home or office for weekly sessions.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <h2>Find the right AI program for your goals</h2>
+  <p>Talk to a free advisor — get a personalised program recommendation based on your background, goals and budget in 20 minutes.</p>
+  <div class="cta-btns">
+    <a href="/apply.html" class="btn btn-green btn-lg">Get free counselling &rarr;</a>
+    <a href="/programs/" class="btn btn-outline-light btn-lg">Browse all programs</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo"><span class="ai">AI</span> Course India</div>
+      <p>India's most complete guide to AI, Data Science and ML certificate programs from IITs and IIMs — for working professionals 2026.</p>
+    </div>
+    <div class="footer-col"><div class="footer-col-title">Institutions</div><ul>
+      <li><a href="/institutions/iit-bombay/">IIT Bombay</a></li>
+      <li><a href="/institutions/iit-delhi/">IIT Delhi</a></li>
+      <li><a href="/institutions/iit-roorkee/">IIT Roorkee</a></li>
+      <li><a href="/institutions/iit-madras/">IIT Madras</a></li>
+      <li><a href="/institutions/iit-guwahati/">IIT Guwahati</a></li>
+      <li><a href="/institutions/iim-kozhikode/">IIM Kozhikode</a></li>
+      <li><a href="/institutions/iim-indore/">IIM Indore</a></li>
+    </ul></div>
+    <div class="footer-col"><div class="footer-col-title">Tracks</div><ul>
+      <li><a href="/tracks/generative-ai/">Generative AI &amp; LLMs</a></li>
+      <li><a href="/tracks/data-science/">Data Science</a></li>
+      <li><a href="/tracks/machine-learning/">Machine Learning</a></li>
+      <li><a href="/tracks/ai-for-managers/">AI for Managers</a></li>
+      <li><a href="/tracks/analytics/">Business Analytics</a></li>
+    </ul></div>
+    <div class="footer-col"><div class="footer-col-title">Tools</div><ul>
+      <li><a href="/programs/">All programs</a></li>
+      <li><a href="/compare.html">Compare programs</a></li>
+      <li><a href="/apply.html">Free counselling</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/privacy.html">Privacy</a></li>
+      <li><a href="/disclaimer.html">Disclaimer</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 aicourseindia.com &middot; Independent information portal</div>
+    <div class="footer-bottom-links"><a href="/privacy.html">Privacy</a><a href="/disclaimer.html">Disclaimer</a></div>
+  </div>
+</footer>
+
+<div class="sticky-mobile">
+  <a href="tel:+918080089898" class="sm-call">&#128222; Call</a>
+  <a href="/apply.html" class="sm-apply">Free counselling &rarr;</a>
+</div>
+
+<script src="/assets/main.js"></script>
+<script>
+// Program finder
+var sel = {};
+function setPill(group, val, btn) {
+  sel[group] = val;
+  btn.closest('.fp-pills').querySelectorAll('.fp-pill').forEach(b => b.classList.remove('sel'));
+  btn.classList.add('sel');
+  if (sel.bg && sel.goal) showResult();
+}
+function showResult() {
+  var bg = sel.bg, goal = sel.goal;
+  var prog, inst;
+  if (goal === 'genai' && bg === 'tech') { prog = 'Advanced Certificate in ML, GenAI & LLMs for Business'; inst = 'IIT Madras — IITM Pravartak'; }
+  else if (goal === 'genai' && bg === 'manager') { prog = 'AI for Business Managers'; inst = 'IIT Bombay — DSSE'; }
+  else if (goal === 'genai') { prog = 'PCP in Applied Analytics & GenAI for Business Decisions'; inst = 'IIM Kozhikode'; }
+  else if (goal === 'ds' && bg === 'tech') { prog = 'PG Certificate in Applied Data Science & AI'; inst = 'IIT Roorkee — CEC'; }
+  else if (goal === 'ds' && bg === 'analyst') { prog = 'Advanced Data Science Certificate (IIT Madras + Rotman UofT)'; inst = 'IIT Madras Pravartak + University of Toronto'; }
+  else if (goal === 'ds') { prog = 'Executive Programme in Applied Data Science using ML & AI'; inst = 'IIT Delhi — CEP'; }
+  else if (goal === 'ml' && bg === 'tech') { prog = 'Executive Certification in Advanced Data Science & Applications'; inst = 'IIT Madras — IITM Pravartak'; }
+  else if (goal === 'ml') { prog = 'Advanced Certification in Data Science & Machine Learning'; inst = 'IIT Guwahati — E&ICT Academy'; }
+  else if (goal === 'strategy' && bg === 'manager') { prog = 'Executive Programme in AI & Cybersecurity for Organizations'; inst = 'IIM Indore — NIRF #7'; }
+  else { prog = 'PCP in Applied Analytics & GenAI for Business Decisions'; inst = 'IIM Kozhikode — NIRF #10'; }
+  document.getElementById('fp-prog').textContent = prog;
+  document.getElementById('fp-inst').textContent = inst;
+  document.getElementById('fp-result').classList.add('show');
+}
+
+// Program filter
+function filterProgs(type, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#prog-grid .prog-card').forEach(c => {
+    var show = true;
+    if (type === 'iit') show = c.dataset.inst === 'iit';
+    else if (type === 'iim') show = c.dataset.inst === 'iim';
+    else if (type === 'genai') show = (c.dataset.track||'').includes('genai');
+    else if (type === 'ds') show = (c.dataset.track||'').includes('ds');
+    else if (type === 'manager') show = (c.dataset.track||'').includes('manager');
+    else if (type === 'short') show = c.dataset.dur === 'short';
+    c.style.display = show ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
