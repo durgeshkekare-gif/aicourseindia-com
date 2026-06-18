@@ -19,12 +19,14 @@
 .iit-b{background:var(--blue-glow);border:1px solid rgba(37,99,235,0.2);color:var(--blue);}
 .iim-b{background:var(--green-glow);border:1px solid rgba(16,185,129,0.2);color:var(--green);}
 .best{color:var(--green);font-weight:700;}
-.vc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-top:2rem;}
-.vc{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:1.5rem;border-top:3px solid var(--blue);}
-.vc-who{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:0.4rem;}
-.vc-prog{font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--blue);margin-bottom:0.3rem;}
-.vc-inst{font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;}
-.vc-why{font-size:0.8rem;color:var(--text-muted);line-height:1.65;}
+.vc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;}
+@media(max-width:960px){.vc-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.vc-grid{grid-template-columns:1fr;}}
+.vc{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:1.25rem;border-left:3px solid var(--blue);display:flex;flex-direction:column;gap:0.25rem;}
+.vc-who{font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);}
+.vc-prog{font-family:var(--font-head);font-size:0.88rem;font-weight:700;color:var(--blue);line-height:1.3;}
+.vc-inst{font-size:0.72rem;color:var(--text-muted);font-weight:500;}
+.vc-why{font-size:0.78rem;color:var(--text-muted);line-height:1.6;margin-top:0.35rem;border-top:1px solid var(--border);padding-top:0.5rem;}
 </style>
 </head>
 <body>
@@ -61,13 +63,13 @@
     <div class="eyebrow">Who should choose what</div>
     <h2 class="section-title">Program recommendations by profile</h2>
     <div class="vc-grid">
-      <div class="vc"><div class="vc-who">Non-tech manager / VP / Director</div><div class="vc-prog">AI for Business Managers</div><div class="vc-inst">IIT Bombay — DSSE</div><div class="vc-why">Only IIT program built entirely for non-technical managers. Covers GenAI strategy, prompt engineering and enterprise AI — no coding background required.</div></div>
-      <div class="vc"><div class="vc-who">Software engineer / developer upskilling</div><div class="vc-prog">Applied Data Science — ML & AI</div><div class="vc-inst">IIT Delhi — CEP</div><div class="vc-why">Mathematics-rigorous, technically deep. Built by IIT Delhi's Department of Mathematics for engineers who want to move into data science / ML roles.</div></div>
-      <div class="vc"><div class="vc-who">Tech professional wanting campus IIT experience</div><div class="vc-prog">PG Certificate in Applied Data Science & AI</div><div class="vc-inst">IIT Roorkee — CEC</div><div class="vc-why">Two campus immersion modules at IIT Roorkee included. Covers GenAI and LLMs. Best for professionals who want the IIT campus experience alongside online learning.</div></div>
-      <div class="vc"><div class="vc-who">Data scientist / ML engineer advancing skills</div><div class="vc-prog">Executive Certification in Advanced Data Science</div><div class="vc-inst">IIT Madras — IITM Pravartak</div><div class="vc-why">Research-led curriculum from NIRF #1. Deep learning, AI and advanced analytics — 10 months, most comprehensive technical program on this list.</div></div>
-      <div class="vc"><div class="vc-who">Professional wanting global credential</div><div class="vc-prog">Advanced Data Science (IIT Madras + Rotman UofT)</div><div class="vc-inst">IIT Madras + University of Toronto</div><div class="vc-why">Only program on this list with a joint IIT + global university credential. Rotman School of Management (UofT) is globally ranked. Best value at ₹1.61L.</div></div>
-      <div class="vc"><div class="vc-who">Business analyst / manager wanting GenAI skills</div><div class="vc-prog">Applied Analytics & GenAI for Business Decisions</div><div class="vc-inst">IIM Kozhikode</div><div class="vc-why">IIM approach to analytics — case-method, business frameworks, managerial perspective. Best for managers who want to be data-literate, not ML engineers.</div></div>
-      <div class="vc"><div class="vc-who">IT leader / manager needing AI + security</div><div class="vc-prog">AI & Cybersecurity for Organizations</div><div class="vc-inst">IIM Indore</div><div class="vc-why">Unique dual coverage of AI and cybersecurity from a Triple Crown IIM. Ideal for CTOs, IT managers and security professionals who need both skill sets.</div></div>
+      <div class="vc"><div class="vc-who">Non-tech manager / VP / Director</div><div class="vc-prog">AI for Business Managers</div><div class="vc-inst">IIT Bombay — DSSE</div><div class="vc-why">Only IIT program for non-technical managers. GenAI strategy, prompt engineering — no coding needed.</div></div>
+      <div class="vc"><div class="vc-who">Software engineer / developer upskilling</div><div class="vc-prog">Applied Data Science — ML & AI</div><div class="vc-inst">IIT Delhi — CEP</div><div class="vc-why">Mathematics-rigorous, technically deep. Built by IIT Delhi's Math Dept for engineers moving into DS/ML.</div></div>
+      <div class="vc"><div class="vc-who">Tech professional wanting campus IIT experience</div><div class="vc-prog">PG Certificate in Applied Data Science & AI</div><div class="vc-inst">IIT Roorkee — CEC</div><div class="vc-why">Two campus immersion modules at IIT Roorkee. Covers GenAI & LLMs. Best for campus experience seekers.</div></div>
+      <div class="vc"><div class="vc-who">Data scientist / ML engineer advancing skills</div><div class="vc-prog">Executive Certification in Advanced Data Science</div><div class="vc-inst">IIT Madras — IITM Pravartak</div><div class="vc-why">Research-led from NIRF #1. Deep learning + AI. Most comprehensive 10-month technical program.</div></div>
+      <div class="vc"><div class="vc-who">Professional wanting global credential</div><div class="vc-prog">Advanced Data Science (IIT Madras + Rotman UofT)</div><div class="vc-inst">IIT Madras + University of Toronto</div><div class="vc-why">Only joint IIT + global university credential. Rotman UofT globally ranked. Best value at ₹1.61L.</div></div>
+      <div class="vc"><div class="vc-who">Business analyst / manager wanting GenAI skills</div><div class="vc-prog">Applied Analytics & GenAI for Business Decisions</div><div class="vc-inst">IIM Kozhikode</div><div class="vc-why">IIM case-method approach to analytics and GenAI. For managers wanting data literacy, not ML.</div></div>
+      <div class="vc"><div class="vc-who">IT leader / manager needing AI + security</div><div class="vc-prog">AI & Cybersecurity for Organizations</div><div class="vc-inst">IIM Indore</div><div class="vc-why">Dual AI + cybersecurity from Triple Crown IIM. Ideal for CTOs and IT managers needing both.</div></div>
     </div>
   </div>
 
