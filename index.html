@@ -189,30 +189,33 @@
   <div class="eyebrow">Browse by track</div>
   <h2 class="section-title">Which AI track fits your goals?</h2>
   <div class="tracks-grid">
-    <a href="/tracks/generative-ai/" class="track-card"><div class="track-icon">🤖</div><div class="track-name">Generative AI &amp; LLMs</div><div class="track-count">4 programs</div></a>
-    <a href="/tracks/data-science/" class="track-card"><div class="track-icon">📊</div><div class="track-name">Data Science</div><div class="track-count">5 programs</div></a>
-    <a href="/tracks/machine-learning/" class="track-card"><div class="track-icon">🧠</div><div class="track-name">Machine Learning</div><div class="track-count">4 programs</div></a>
-    <a href="/tracks/ai-for-managers/" class="track-card"><div class="track-icon">💼</div><div class="track-name">AI for Managers</div><div class="track-count">3 programs</div></a>
-    <a href="/tracks/analytics/" class="track-card"><div class="track-icon">📈</div><div class="track-name">Business Analytics</div><div class="track-count">3 programs</div></a>
-    <a href="/tracks/cybersecurity/" class="track-card"><div class="track-icon">🔐</div><div class="track-name">AI &amp; Cybersecurity</div><div class="track-count">1 program</div></a>
+    <a href="#programs-section" class="track-card" onclick="selectTrack('genai',this);return false;"><div class="track-icon">🤖</div><div class="track-name">Generative AI &amp; LLMs</div><div class="track-count">4 programs</div></a>
+    <a href="#programs-section" class="track-card" onclick="selectTrack('ds',this);return false;"><div class="track-icon">📊</div><div class="track-name">Data Science</div><div class="track-count">5 programs</div></a>
+    <a href="#programs-section" class="track-card" onclick="selectTrack('ml',this);return false;"><div class="track-icon">🧠</div><div class="track-name">Machine Learning</div><div class="track-count">4 programs</div></a>
+    <a href="#programs-section" class="track-card" onclick="selectTrack('manager',this);return false;"><div class="track-icon">💼</div><div class="track-name">AI for Managers</div><div class="track-count">3 programs</div></a>
+    <a href="#programs-section" class="track-card" onclick="selectTrack('analytics',this);return false;"><div class="track-icon">📈</div><div class="track-name">Business Analytics</div><div class="track-count">3 programs</div></a>
+    <a href="#programs-section" class="track-card" onclick="selectTrack('cyber',this);return false;"><div class="track-icon">🔐</div><div class="track-name">AI &amp; Cybersecurity</div><div class="track-count">1 program</div></a>
   </div>
 </section>
 
 <!-- ALL PROGRAMS -->
-<section class="programs-section">
+<section class="programs-section" id="programs-section">
   <div class="eyebrow">13+ programs · 8 institutions</div>
   <h2 class="section-title">All AI &amp; Data Science programs — 2026</h2>
   <div class="filter-row">
     <span class="filter-label">Filter:</span>
-    <button class="filter-btn active" onclick="filterProgs('all',this)">All</button>
-    <button class="filter-btn" onclick="filterProgs('iit',this)">IIT only</button>
-    <button class="filter-btn" onclick="filterProgs('iim',this)">IIM only</button>
-    <button class="filter-btn" onclick="filterProgs('genai',this)">GenAI</button>
-    <button class="filter-btn" onclick="filterProgs('ds',this)">Data Science</button>
-    <button class="filter-btn" onclick="filterProgs('manager',this)">For Managers</button>
-    <button class="filter-btn" onclick="filterProgs('short',this)">Under 8 months</button>
+    <button class="filter-btn active" onclick="filterProgs('all',this)" data-filter="all">All</button>
+    <button class="filter-btn" onclick="filterProgs('iit',this)" data-filter="iit">IIT only</button>
+    <button class="filter-btn" onclick="filterProgs('iim',this)" data-filter="iim">IIM only</button>
+    <button class="filter-btn" onclick="filterProgs('genai',this)" data-filter="genai">GenAI</button>
+    <button class="filter-btn" onclick="filterProgs('ds',this)" data-filter="ds">Data Science</button>
+    <button class="filter-btn" onclick="filterProgs('manager',this)" data-filter="manager">For Managers</button>
+    <button class="filter-btn" onclick="filterProgs('analytics',this)" data-filter="analytics">Analytics</button>
+    <button class="filter-btn" onclick="filterProgs('cyber',this)" data-filter="cyber">Cybersecurity</button>
+    <button class="filter-btn" onclick="filterProgs('short',this)" data-filter="short">Under 8 months</button>
   </div>
-  <div class="programs-grid" id="prog-grid">
+  <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.875rem;"><span id="filter-count">9 programs</span> <span style="color:var(--text-muted);">— click a track above to filter</span></div>
+<div class="programs-grid" id="prog-grid">
 
     <!-- IIT BOMBAY -->
     <div class="prog-card" data-inst="iit" data-track="genai manager ai" data-dur="short">
