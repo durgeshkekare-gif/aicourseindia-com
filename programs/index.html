@@ -9,14 +9,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 <style>
-.prog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;margin-top:2rem;}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;margin-top:1.5rem;}
+.pc{background:#fff;border-radius:16px;border:1px solid #E2E8F0;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow 0.2s,transform 0.2s;position:relative;}
+.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#2563EB,#10B981);}
+.pc:hover{box-shadow:0 8px 32px rgba(0,0,0,0.1);transform:translateY(-2px);}
+.pc-body{padding:1.25rem 1.25rem 0;flex:1;}
+.pc-badges{display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;}
+.badge-iit{font-size:0.62rem;font-weight:700;padding:0.18rem 0.5rem;border-radius:4px;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.18);color:#2563EB;}
+.badge-iim{font-size:0.62rem;font-weight:700;padding:0.18rem 0.5rem;border-radius:4px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.18);color:#10B981;}
+.pc-inst{font-size:0.75rem;font-weight:600;color:#2563EB;}
+.pc-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;font-weight:700;color:#0F172A;line-height:1.4;margin-bottom:0.6rem;}
+.pc-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.875rem;}
+.pc-tag{font-size:0.62rem;padding:0.18rem 0.5rem;border-radius:4px;background:#F1F5F9;border:1px solid #E2E8F0;color:#64748B;}
+.pc-stats{display:grid;grid-template-columns:1fr 1fr 1fr;background:#F8FAFC;border-top:1px solid #E2E8F0;}
+.pc-stat{padding:0.6rem 0.875rem;text-align:center;border-right:1px solid #E2E8F0;}
+.pc-stat:last-child{border-right:none;}
+.pc-stat .sv{font-size:0.82rem;font-weight:700;color:#0F172A;}
+.pc-stat .sl{font-size:0.6rem;color:#64748B;text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;}
+.pc-foot{padding:0.875rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:0.5rem;flex-wrap:wrap;}
+.pc-foot-btns{display:flex;gap:0.4rem;}
+.btn-enq{display:inline-flex;align-items:center;padding:0.4rem 1rem;background:#2563EB;color:#fff;border-radius:8px;font-weight:700;font-size:0.78rem;text-decoration:none;transition:background 0.2s;}
+.btn-enq:hover{background:#3B82F6;}
+.btn-det{display:inline-flex;align-items:center;padding:0.4rem 0.875rem;background:transparent;color:#0F172A;border:1.5px solid #CBD5E1;border-radius:8px;font-weight:600;font-size:0.78rem;text-decoration:none;transition:border-color 0.2s;}
+.btn-det:hover{border-color:#2563EB;color:#2563EB;}
+.btn-view{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.75rem;font-weight:600;color:#10B981;text-decoration:none;white-space:nowrap;}
+.btn-view:hover{color:#059669;}
 .filter-row{display:flex;gap:0.5rem;flex-wrap:wrap;padding:1rem 1.25rem;background:#F8FAFC;border-radius:12px;border:1px solid #E2E8F0;margin-bottom:1.5rem;align-items:center;}
-.filter-label{font-size:0.72rem;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:0.08em;}
+.fl{font-size:0.72rem;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:0.08em;}
 .fb{padding:0.35rem 0.875rem;border-radius:20px;font-size:0.75rem;font-weight:600;border:1.5px solid #E2E8F0;background:#fff;color:#64748B;cursor:pointer;transition:all 0.15s;font-family:inherit;}
 .fb:hover,.fb.on{background:#0A0F1E;color:#fff;border-color:#0A0F1E;}
+[data-hide]{display:none;}
 </style>
 </head>
 <body>
+
 <nav class="site-nav">
   <a href="/" class="nav-logo"><span class="ai">AI</span> Course<span class="dot">●</span>India</a>
   <ul class="nav-links">
@@ -28,15 +54,17 @@
   <a href="/apply.html" class="nav-cta">Free counselling</a>
   <button class="nav-hamburger">&#9776;</button>
 </nav>
+
 <div style="background:#0A0F1E;padding:64px 5%;text-align:center;position:relative;overflow:hidden;">
   <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#2563EB,#10B981);"></div>
   <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:#10B981;margin-bottom:0.875rem;">9 programs · 7 institutions · 2026</div>
   <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#fff;letter-spacing:-0.02em;margin-bottom:0.75rem;">All AI &amp; Data Science Programs</h1>
-  <p style="font-size:1rem;color:rgba(255,255,255,0.5);max-width:520px;margin:0 auto 1.5rem;">IIT and IIM certificate programs for working professionals. No JEE or CAT required. Each card has a direct link to the program page.</p>
+  <p style="font-size:1rem;color:rgba(255,255,255,0.5);max-width:560px;margin:0 auto;">IIT and IIM certificate programs for working professionals 2026. No JEE or CAT required. Click <strong style="color:#10B981;">View program</strong> on any card to go directly to the program page.</p>
 </div>
+
 <section style="padding:56px 5%;max-width:1280px;margin:0 auto;">
   <div class="filter-row">
-    <span class="filter-label">Filter:</span>
+    <span class="fl">Filter:</span>
     <button class="fb on" onclick="filterAll(this)">All 9</button>
     <button class="fb" onclick="filterBy('iit',this)">IIT only</button>
     <button class="fb" onclick="filterBy('iim',this)">IIM only</button>
@@ -45,29 +73,215 @@
     <button class="fb" onclick="filterBy('manager',this)">For Managers</button>
     <button class="fb" onclick="filterBy('short',this)">Under 8 months</button>
   </div>
-  <div class="prog-grid" id="pg">
-    <div class="pc-wrap" data-inst="iit" data-track="genai · ai for managers" data-level="non-tech managers" data-dur="short"><div style="background:#fff;border-radius:16px;border:1px solid #E2E8F0;overflow:hidden;display:flex;flex-direction:column;transition:all 0.2s;position:relative;">
-  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#2563EB,#10B981);"></div><div class="pc-wrap" data-inst="iit" data-track="data science · ml" data-level="tech / engineers" data-dur="short">  <div style="padding:1.25rem 1.25rem 0;flex:1;">
-    <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem;">
-      <span style="font-size:0.62rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:4px;background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.18);color:#2563EB;">IIT</span>
-      <span style="font-size:0.72rem;font-weight:600;color:#2563EB;">IIT Bombay</span>
-    </div><div class="pc-wrap" data-inst="iit" data-track="data science · genai · campus" data-level="tech + managerial" data-dur="short">    <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;font-weight:700;color:#0F172A;line-height:1.4;margin-bottom:0.6rem;">Certificate Programme in AI for Business Managers</div><div class="pc-wrap" data-inst="iit" data-track="deep learning · ai" data-level="tech / 3+ yrs" data-dur="short">    <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.875rem;">
-      <span style="font-size:0.62rem;padding:0.15rem 0.5rem;border-radius:4px;background:#F1F5F9;border:1px solid #E2E8F0;color:#64748B;">GenAI</span><span style="font-size:0.62rem;padding:0.15rem 0.5rem;border-radius:4px;background:#F1F5F9;border:1px solid #E2E8F0;color:#64748B;">AI for Managers</span>
-      <span style="font-size:0.62rem;padding:0.15rem 0.5rem;border-radius:4px;background:#F1F5F9;border:1px solid #E2E8F0;color:#64748B;">Non-tech managers</span>
-    </div><div class="pc-wrap" data-inst="iit" data-track="genai · ml" data-level="tech or business" data-dur="short">  </div><div class="pc-wrap" data-inst="iit" data-track="data science · global credential" data-level="any graduate" data-dur="short">  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#F8FAFC;border-top:1px solid #E2E8F0;">
-    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid #E2E8F0;">
-      <div style="font-size:0.82rem;font-weight:700;color:#0F172A;">6 months</div><div class="pc-wrap" data-inst="iit" data-track="data science · ml" data-level="tech / any grad" data-dur="short">      <div style="font-size:0.6rem;color:#64748B;text-transform:uppercase;letter-spacing:0.06em;margin-top:1px;">Duration</div><div class="pc-wrap" data-inst="iim" data-track="analytics · genai" data-level="business managers" data-dur="short">    </div><div class="pc-wrap" data-inst="iim" data-track="ai strategy · cybersecurity" data-level="managers / it leaders" data-dur="short">    <div style="padding:0.6rem 0.875rem;text-align:center;border-right:1px solid #E2E8F0;">
-      <div style="font-size:0.82rem;font-weight:700;color:#0F172A;">~₹1.5–2L</div>
+
+  <div class="pg" id="pg">
+
+    <!-- 1. IIT BOMBAY -->
+    <div class="pc" data-inst="iit" data-track="genai manager" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-badges"><span class="badge-iit">IIT</span><span class="pc-inst">IIT Bombay · DSSE</span></div>
+        <div class="pc-title">Certificate Programme in AI for Business Managers</div>
+        <div class="pc-tags"><span class="pc-tag">GenAI</span><span class="pc-tag">Prompt Engineering</span><span class="pc-tag">AI Strategy</span><span class="pc-tag">Non-technical managers</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">6 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;1.5–2L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Managers</div><div class="sl">Best for</div></div>
+      </div>
+      <div class="pc-foot">
+        <div class="pc-foot-btns">
+          <a href="/apply.html?p=iitb-ai" class="btn-enq">Enquire</a>
+          <a href="/institutions/iit-bombay/" class="btn-det">Details</a>
+        </div>
+        <a href="https://www.jaroeducation.com/ai-for-business-managers-iit-bombay" target="_blank" rel="noopener" class="btn-view">View program &#8599;</a>
+      </div>
+    </div>
+
+    <!-- 2. IIT DELHI -->
+    <div class="pc" data-inst="iit" data-track="ds ml" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-badges"><span class="badge-iit">IIT</span><span class="pc-inst">IIT Delhi · CEP</span></div>
+        <div class="pc-title">Executive Programme in Applied Data Science using ML &amp; AI</div>
+        <div class="pc-tags"><span class="pc-tag">Data Science</span><span class="pc-tag">Machine Learning</span><span class="pc-tag">AI</span><span class="pc-tag">Python</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">6 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;1.5–2L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Tech / Engineers</div><div class="sl">Best for</div></div>
+      </div>
+      <div class="pc-foot">
+        <div class="pc-foot-btns">
+          <a href="/apply.html?p=iitd-ds" class="btn-enq">Enquire</a>
+          <a href="/institutions/iit-delhi/" class="btn-det">Details</a>
+        </div>
+        <a href="https://www.jaroeducation.com/executive-programme-in-applied-data-science-using-machine-learning-artificial-intelligence" target="_blank" rel="noopener" class="btn-view">View program &#8599;</a>
+      </div>
+    </div>
+
+    <!-- 3. IIT ROORKEE -->
+    <div class="pc" data-inst="iit" data-track="ds genai ml" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-badges"><span class="badge-iit">IIT</span><span class="pc-inst">IIT Roorkee · CEC</span></div>
+        <div class="pc-title">PG Certificate in Applied Data Science &amp; AI</div>
+        <div class="pc-tags"><span class="pc-tag">Data Science</span><span class="pc-tag">AI</span><span class="pc-tag">GenAI &amp; LLMs</span><span class="pc-tag">Campus immersion</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">6–8 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;1.5–2L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Tech + Mgmt</div><div class="sl">Best for</div></div>
+      </div>
+      <div class="pc-foot">
+        <div class="pc-foot-btns">
+          <a href="/apply.html?p=iitr-dsai" class="btn-enq">Enquire</a>
+          <a href="/institutions/iit-roorkee/" class="btn-det">Details</a>
+        </div>
+        <a href="https://www.jaroeducation.com/post-graduate-certificate-programme-in-applied-data-science-ai-iit-roorkee/" target="_blank" rel="noopener" class="btn-view">View program &#8599;</a>
+      </div>
+    </div>
+
+    <!-- 4. IIT MADRAS — Advanced DS -->
+    <div class="pc" data-inst="iit" data-track="ds ml ai" data-dur="long">
+      <div class="pc-body">
+        <div class="pc-badges"><span class="badge-iit">IIT</span><span class="pc-inst">IIT Madras · IITM Pravartak</span></div>
+        <div class="pc-title">Executive Certification in Advanced Data Science &amp; Applications</div>
+        <div class="pc-tags"><span class="pc-tag">Deep Learning</span><span class="pc-tag">AI</span><span class="pc-tag">Data Analytics</span><span class="pc-tag">Python / TensorFlow</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">10 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;2L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Tech / 3+ yrs</div><div class="sl">Best for</div></div>
+      </div>
+      <div class="pc-foot">
+        <div class="pc-foot-btns">
+          <a href="/apply.html?p=iitm-adsa" class="btn-enq">Enquire</a>
+          <a href="/institutions/iit-madras/" class="btn-det">Details</a>
+        </div>
+        <a href="https://www.jaroeducation.com/executive-certification-in-advanced-data-science-applications-iitm-pravartak" target="_blank" rel="noopener" class="btn-view">View program &#8599;</a>
+      </div>
+    </div>
+
+    <!-- 5. IIT MADRAS — GenAI -->
+    <div class="pc" data-inst="iit" data-track="genai ml" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-badges"><span class="badge-iit">IIT</span><span class="pc-inst">IIT Madras · IITM Pravartak</span></div>
+        <div class="pc-title">Advanced Certificate in ML, Generative AI &amp; LLMs for Business</div>
+        <div class="pc-tags"><span class="pc-tag">GenAI</span><span class="pc-tag">LLMs</span><span class="pc-tag">Machine Learning</span><span class="pc-tag">Business AI</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">~8 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;1.5L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Tech or Business</div><div class="sl">Best for</div></div>
+      </div>
+      <div class="pc-foot">
+        <div class="pc-foot-btns">
+          <a href="/apply.html?p=iitm-genai" class="btn-enq">Enquire</a>
+          <a href="/institutions/iit-madras/" class="btn-det">Details</a>
+        </div>
+        <a href="https://www.jaroeducation.com/advanced-generative-ai-machine-learning-iitm-pravartak" target="_blank" rel="noopener" class="btn-view">View program &#8599;</a>
+      </div>
+    </div>
+
+    <!-- 6. IIT MADRAS — Rotman -->
+    <div class="pc" data-inst="iit" data-track="ds analytics" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-badges"><span class="badge-iit">IIT</span><span class="pc-inst">IIT Madras + Rotman UofT</span></div>
+        <div class="pc-title">Advanced Data Science Certificate Program (Global)</div>
+        <div class="pc-tags"><span class="pc-tag">Data Science</span><span class="pc-tag">Analytics</span><span class="pc-tag">University of Toronto</span><span class="pc-tag">Global credential</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">~6 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">&#8377;1.61L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Any graduate</div><div class="sl">Eligibility</div></div>
+      </div>
+      <div class="pc-foot">
+        <div class="pc-foot-btns">
+          <a href="/apply.html?p=iitm-rotman" class="btn-enq">Enquire</a>
+          <a href="/institutions/iit-madras/" class="btn-det">Details</a>
+        </div>
+        <a href="https://www.jaroeducation.com/advanced-data-science-certificate-program-rotman-school-of-management-uoft-iitm-pravartak-technology-innovation-hub-of-iit-madras" target="_blank" rel="noopener" class="btn-view">View program &#8599;</a>
+      </div>
+    </div>
+
+    <!-- 7. IIT GUWAHATI -->
+    <div class="pc" data-inst="iit" data-track="ds ml" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-badges"><span class="badge-iit">IIT</span><span class="pc-inst">IIT Guwahati · E&amp;ICT Academy</span></div>
+        <div class="pc-title">Advanced Professional Certification in Data Science &amp; Machine Learning</div>
+        <div class="pc-tags"><span class="pc-tag">Data Science</span><span class="pc-tag">Machine Learning</span><span class="pc-tag">Python</span><span class="pc-tag">NLP</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">6 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;1.5L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Tech / Any grad</div><div class="sl">Best for</div></div>
+      </div>
+      <div class="pc-foot">
+        <div class="pc-foot-btns">
+          <a href="/apply.html?p=iitg-dsml" class="btn-enq">Enquire</a>
+          <a href="/institutions/iit-guwahati/" class="btn-det">Details</a>
+        </div>
+        <a href="https://www.jaroeducation.com/advanced-professional-certification-programme-in-data-science-machine-learning-eict-iit-guwahati" target="_blank" rel="noopener" class="btn-view">View program &#8599;</a>
+      </div>
+    </div>
+
+    <!-- 8. IIM KOZHIKODE -->
+    <div class="pc" data-inst="iim" data-track="analytics genai manager" data-dur="long">
+      <div class="pc-body">
+        <div class="pc-badges"><span class="badge-iim">IIM</span><span class="pc-inst" style="color:#10B981;">IIM Kozhikode · NIRF #10</span></div>
+        <div class="pc-title">PCP in Applied Analytics &amp; GenAI for Business Decisions</div>
+        <div class="pc-tags"><span class="pc-tag">Business Analytics</span><span class="pc-tag">GenAI</span><span class="pc-tag">Data-driven decisions</span><span class="pc-tag">Managers</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">12 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;2L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Business mgrs</div><div class="sl">Best for</div></div>
+      </div>
+      <div class="pc-foot">
+        <div class="pc-foot-btns">
+          <a href="/apply.html?p=iimk-analytics" class="btn-enq" style="background:#10B981;">Enquire</a>
+          <a href="/institutions/iim-kozhikode/" class="btn-det">Details</a>
+        </div>
+        <a href="https://www.jaroeducation.com/professional-certificate-programme-applied-analytic-gen-ai-business-decisions-iim-kozhikode" target="_blank" rel="noopener" class="btn-view">View program &#8599;</a>
+      </div>
+    </div>
+
+    <!-- 9. IIM INDORE -->
+    <div class="pc" data-inst="iim" data-track="ai manager cybersecurity" data-dur="short">
+      <div class="pc-body">
+        <div class="pc-badges"><span class="badge-iim">IIM</span><span class="pc-inst" style="color:#10B981;">IIM Indore · NIRF #7 · Triple Crown</span></div>
+        <div class="pc-title">Executive Programme in AI &amp; Cybersecurity for Organizations</div>
+        <div class="pc-tags"><span class="pc-tag">AI Strategy</span><span class="pc-tag">Cybersecurity</span><span class="pc-tag">Machine Learning</span><span class="pc-tag">Non-tech managers</span></div>
+      </div>
+      <div class="pc-stats">
+        <div class="pc-stat"><div class="sv">~8 months</div><div class="sl">Duration</div></div>
+        <div class="pc-stat"><div class="sv">~&#8377;2.5–3L</div><div class="sl">Fee + GST</div></div>
+        <div class="pc-stat"><div class="sv">Managers / IT</div><div class="sl">Best for</div></div>
+      </div>
+      <div class="pc-foot">
+        <div class="pc-foot-btns">
+          <a href="/apply.html?p=iimi-cyber" class="btn-enq" style="background:#10B981;">Enquire</a>
+          <a href="/institutions/iim-indore/" class="btn-det">Details</a>
+        </div>
+        <a href="https://www.jaroeducation.com/executive-programme-in-artificial-intelligence-and-cyber-security-for-organizations-iim-indore" target="_blank" rel="noopener" class="btn-view">View program &#8599;</a>
+      </div>
+    </div>
+
+  </div><!-- end #pg -->
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:2rem;padding-top:1.5rem;border-top:1px solid #E2E8F0;">
+    <span style="font-size:0.82rem;color:#64748B;"><span id="count">9</span> programs shown</span>
+    <a href="/compare.html" style="font-size:0.82rem;font-weight:600;color:#2563EB;">Side-by-side comparison &rarr;</a>
   </div>
 </section>
+
 <div style="background:linear-gradient(135deg,#0A0F1E,#1E2D4A);padding:64px 5%;text-align:center;">
-  <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:#fff;margin-bottom:0.75rem;">Not sure which program?</h2>
+  <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:#fff;margin-bottom:0.75rem;">Not sure which program is right?</h2>
   <p style="font-size:0.95rem;color:rgba(255,255,255,0.5);margin-bottom:1.5rem;max-width:480px;margin-left:auto;margin-right:auto;">A free advisor matches your background and goals to the right program in 20 minutes.</p>
   <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
     <a href="/apply.html" style="display:inline-flex;align-items:center;padding:0.9rem 2rem;background:#2563EB;color:#fff;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;">Get free counselling &rarr;</a>
     <a href="/compare.html" style="display:inline-flex;align-items:center;padding:0.9rem 2rem;background:transparent;color:rgba(255,255,255,0.7);border:1.5px solid rgba(255,255,255,0.2);border-radius:8px;font-weight:600;font-size:0.95rem;text-decoration:none;">Compare table</a>
   </div>
 </div>
+
 <footer class="site-footer">
   <div class="footer-top">
     <div class="footer-brand"><div class="footer-logo"><span class="ai">AI</span> Course India</div><p>India's most complete guide to AI, Data Science and ML programs from IITs and IIMs.</p></div>
@@ -96,7 +310,32 @@
 <div class="sticky-mobile"><a href="tel:+918080089898" class="sm-call">&#128222; Call</a><a href="/apply.html" class="sm-apply">Free counselling &rarr;</a></div>
 <script src="/assets/main.js"></script>
 <script>
-function filterAll(btn){document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');document.querySelectorAll('.pc-wrap').forEach(c=>c.style.display='');}
-function filterBy(type,btn){document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');document.querySelectorAll('.pc-wrap').forEach(c=>{var show=true;if(type==='iit')show=c.dataset.inst==='iit';else if(type==='iim')show=c.dataset.inst==='iim';else if(type==='genai')show=(c.dataset.track||'').includes('genai');else if(type==='ds')show=(c.dataset.track||'').includes('data science');else if(type==='manager')show=(c.dataset.level||'').includes('manager');else if(type==='short')show=c.dataset.dur==='short';c.style.display=show?'':'none';});}
+function filterAll(btn) {
+  document.querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('#pg .pc').forEach(c => c.removeAttribute('data-hide'));
+  updateCount();
+}
+function filterBy(type, btn) {
+  document.querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('#pg .pc').forEach(c => {
+    var show = true;
+    if (type === 'iit') show = c.dataset.inst === 'iit';
+    else if (type === 'iim') show = c.dataset.inst === 'iim';
+    else if (type === 'genai') show = c.dataset.track.includes('genai');
+    else if (type === 'ds') show = c.dataset.track.includes('ds');
+    else if (type === 'manager') show = c.dataset.track.includes('manager');
+    else if (type === 'short') show = c.dataset.dur === 'short';
+    if (show) c.removeAttribute('data-hide');
+    else c.setAttribute('data-hide', '1');
+  });
+  updateCount();
+}
+function updateCount() {
+  var n = document.querySelectorAll('#pg .pc:not([data-hide])').length;
+  document.getElementById('count').textContent = n;
+}
 </script>
-</body></html>
+</body>
+</html>
