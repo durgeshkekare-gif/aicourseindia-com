@@ -10,6 +10,7 @@
     { "source": "/programs", "destination": "/programs/index.html" },
     { "source": "/institutions", "destination": "/institutions/index.html" },
     { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/tracks", "destination": "/tracks/index.html" },
     { "source": "/institutions/:slug", "destination": "/institutions/:slug/index.html" },
     { "source": "/tracks/:slug", "destination": "/tracks/:slug/index.html" }
   ]
