@@ -71,7 +71,13 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "https://www.aicourseindia.com/:path*",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.aicourseindia.com"
+        }
+      ],
       "destination": "https://aicourseindia.com/:path*",
       "permanent": true
     }
