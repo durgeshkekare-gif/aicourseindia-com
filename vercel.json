@@ -68,18 +68,5 @@
       "maxDuration": 10
     }
   },
-  "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.aicourseindia.com"
-        }
-      ],
-      "destination": "https://aicourseindia.com/:path*",
-      "permanent": true
-    }
-  ]
+  "trailingSlash": false
 }
