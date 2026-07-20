@@ -73,18 +73,5 @@
     }
   },
   "trailingSlash": false,
-  "cleanUrls": true,
-  "redirects": [
-    {
-      "source": "/((?!assets/|api/|favicon|robots|sitemap).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.aicourseindia.com"
-        }
-      ],
-      "destination": "https://aicourseindia.com/:path*",
-      "permanent": true
-    }
-  ]
+  "cleanUrls": true
 }
